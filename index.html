@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>GitHub Portfolio</title>
+  <title>Khoyal's Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Inter:wght@400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -588,43 +588,27 @@
            ============================================= -->
       <div class="skill-card">
           <div class="skill-name">TypeScript</div>
-          <div class="skill-bar-bg"><div class="skill-bar-fill" data-pct="92" style="width:0"></div></div>
-          <div class="skill-pct">92%</div>
         </div>
         <div class="skill-card">
           <div class="skill-name">Python</div>
-          <div class="skill-bar-bg"><div class="skill-bar-fill" data-pct="88" style="width:0"></div></div>
-          <div class="skill-pct">88%</div>
         </div>
         <div class="skill-card">
           <div class="skill-name">Go</div>
-          <div class="skill-bar-bg"><div class="skill-bar-fill" data-pct="75" style="width:0"></div></div>
-          <div class="skill-pct">75%</div>
         </div>
         <div class="skill-card">
           <div class="skill-name">Rust</div>
-          <div class="skill-bar-bg"><div class="skill-bar-fill" data-pct="60" style="width:0"></div></div>
-          <div class="skill-pct">60%</div>
         </div>
         <div class="skill-card">
           <div class="skill-name">React</div>
-          <div class="skill-bar-bg"><div class="skill-bar-fill" data-pct="90" style="width:0"></div></div>
-          <div class="skill-pct">90%</div>
         </div>
         <div class="skill-card">
           <div class="skill-name">PostgreSQL</div>
-          <div class="skill-bar-bg"><div class="skill-bar-fill" data-pct="82" style="width:0"></div></div>
-          <div class="skill-pct">82%</div>
         </div>
         <div class="skill-card">
           <div class="skill-name">Docker / K8s</div>
-          <div class="skill-bar-bg"><div class="skill-bar-fill" data-pct="78" style="width:0"></div></div>
-          <div class="skill-pct">78%</div>
         </div>
         <div class="skill-card">
           <div class="skill-name">Machine Learning</div>
-          <div class="skill-bar-bg"><div class="skill-bar-fill" data-pct="70" style="width:0"></div></div>
-          <div class="skill-pct">70%</div>
         </div>
       </div>
     </section>
@@ -657,14 +641,14 @@
           </div>
           <div>
             <div class="contact-label">LinkedIn</div>
-            <div class="contact-value">Yousef Taha</div>
+            <div class="contact-value">Khoyal Raumessur</div>
           </div>
         </a>
       </div>
     </section>
 
     <footer>
-      <p>© 2026 Yousef Taha — Built with ♥ and lots of coffee</p>
+      <p>© 2026 Khoyal Raumessur — Built with ♥ and lots of coffee</p>
       <p>Open source on GitHub</p>
     </footer>
 
@@ -672,25 +656,6 @@
 
   <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
     // Animate skill bars on scroll
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.querySelectorAll('.skill-bar-fill').forEach(bar => {
-            bar.style.width = bar.dataset.pct + '%';
-          });
-        }
-      });
-    }, { threshold: 0.2 });
-
-    document.querySelectorAll('#skills').forEach(el => observer.observe(el));
 
     // Smooth number count-up for stats
-    document.querySelectorAll('.stat-num').forEach(el => {
-      const target = parseInt(el.textContent);
-      if (isNaN(target)) return;
-      let start = 0;
-      const duration = 1500;
-      const step = timestamp => {
-        if (!start) start = timestamp;
-        const progress = Math.min((timestamp - start) / duration, 1);
-        el.te
+  

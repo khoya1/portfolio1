@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>GitHub Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Inter:wght@400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -26,7 +26,7 @@
     html { scroll-behavior: smooth; }
 
     body {
-      font-family: 'Syne', sans-serif;
+      font-family: 'Inter', sans-serif;
       background: var(--bg);
       color: var(--text);
       min-height: 100vh;
@@ -123,6 +123,7 @@
     }
 
     .hero h1 {
+      font-family: 'Playfair Display', serif;
       font-size: clamp(3rem, 8vw, 7rem);
       font-weight: 800;
       line-height: 1.0;
@@ -154,7 +155,7 @@
       gap: 0.5rem;
       padding: 0.75rem 1.75rem;
       border-radius: 100px;
-      font-family: 'Syne', sans-serif;
+      font-family: 'Inter', sans-serif;
       font-size: 0.875rem;
       font-weight: 600;
       letter-spacing: 0.04em;
@@ -222,6 +223,7 @@
     }
 
     .section-title {
+      font-family: 'Playfair Display', serif;
       font-size: 2rem;
       font-weight: 800;
       letter-spacing: -0.02em;
@@ -316,16 +318,6 @@
       letter-spacing: 0.05em;
     }
 
-    .project-stars {
-      display: flex;
-      align-items: center;
-      gap: 0.375rem;
-      font-family: 'DM Mono', monospace;
-      font-size: 0.75rem;
-      color: var(--muted);
-    }
-    .star-icon { color: #f0b429; font-size: 0.8rem; }
-
     /* SKILLS */
     .skills-grid {
       display: grid;
@@ -353,13 +345,6 @@
       background: rgba(255,255,255,0.06);
       border-radius: 4px;
       overflow: hidden;
-    }
-
-    .skill-bar-fill {
-      height: 100%;
-      border-radius: 4px;
-      background: linear-gradient(90deg, var(--accent), var(--accent2));
-      transition: width 1.5s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
     .skill-pct {
@@ -476,7 +461,7 @@
   <div class="glow-blob blob2"></div>
 
   <nav>
-    <a href="#" class="nav-logo">YT.dev</a>
+    <a href="#" class="nav-logo">YN.dev</a>
     <ul class="nav-links">
       <li><a href="#projects">Projects</a></li>
       <li><a href="#skills">Skills</a></li>
@@ -492,8 +477,7 @@
       <p class="hero-eyebrow animate">Available for opportunities</p>
       <h1 class="animate delay-1">
         <span class="line-muted">Hello, I'm</span><br>
-        <span>Yousef Taha</span><br>
-        <span class="line-accent">Developer.</span>
+        <span>Khoyal Raumessur</span><br>
       </h1>
       <p class="hero-desc animate delay-2">
         I build thoughtful, performant software — from robust backends to polished interfaces. Passionate about open source and clean architecture.
@@ -502,31 +486,11 @@
         <a href="#projects" class="btn btn-primary">View My Work</a>
         <a href="#contact" class="btn btn-ghost">Get In Touch</a>
       </div>
-
-      <div class="stats animate delay-4">
-        <div class="stat-item">
-          <span class="stat-num" id="stat-repos">32</span>
-          <span class="stat-label">Repositories</span>
-        </div>
-        <div class="stat-item">
-          <span class="stat-num">1.2k</span>
-          <span class="stat-label">Stars Earned</span>
-        </div>
-        <div class="stat-item">
-          <span class="stat-num">5</span>
-          <span class="stat-label">Years Coding</span>
-        </div>
-        <div class="stat-item">
-          <span class="stat-num">18</span>
-          <span class="stat-label">Contributions this week</span>
-        </div>
-      </div>
     </div>
 
     <!-- PROJECTS -->
     <section id="projects">
       <div class="section-header">
-        <span class="section-num">01 /</span>
         <h2 class="section-title">Featured Projects</h2>
       </div>
       <div class="projects-grid" id="projects-grid">
@@ -615,11 +579,14 @@
     <!-- SKILLS -->
     <section id="skills">
       <div class="section-header">
-        <span class="section-num">02 /</span>
         <h2 class="section-title">Skills & Tools</h2>
       </div>
       <div class="skills-grid">
-        <div class="skill-card">
+      <!-- =============================================
+           SKILLS — Edit data-pct="NUMBER" (0–100) and the skill name text
+           Also update the matching % text in the .skill-pct div below each bar
+           ============================================= -->
+      <div class="skill-card">
           <div class="skill-name">TypeScript</div>
           <div class="skill-bar-bg"><div class="skill-bar-fill" data-pct="92" style="width:0"></div></div>
           <div class="skill-pct">92%</div>
@@ -665,7 +632,6 @@
     <!-- CONTACT -->
     <section id="contact">
       <div class="section-header">
-        <span class="section-num">03 /</span>
         <h2 class="section-title">Get In Touch</h2>
       </div>
       <div class="contact-row">
@@ -678,11 +644,11 @@
             <div class="contact-value">@yourusername</div>
           </div>
         </a>
-        <a href="mailto:hello@example.com" class="contact-card">
+        <a href="/cdn-cgi/l/email-protection#28404d444447684d50494558444d064b4745" class="contact-card">
           <div class="contact-icon">✉️</div>
           <div>
             <div class="contact-label">Email</div>
-            <div class="contact-value">hello@example.com</div>
+            <div class="contact-value"><span class="__cf_email__" data-cfemail="b6ded3dadad9f6d3ced7dbc6dad398d5d9db">[email&#160;protected]</span></div>
           </div>
         </a>
         <a href="https://linkedin.com" class="contact-card" target="_blank">
@@ -704,7 +670,7 @@
 
   </main>
 
-  <script>
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
     // Animate skill bars on scroll
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
@@ -727,12 +693,4 @@
       const step = timestamp => {
         if (!start) start = timestamp;
         const progress = Math.min((timestamp - start) / duration, 1);
-        el.textContent = Math.floor(progress * target);
-        if (progress < 1) requestAnimationFrame(step);
-        else el.textContent = target;
-      };
-      setTimeout(() => requestAnimationFrame(step), 400);
-    });
-  </script>
-</body>
-</html>
+        el.te

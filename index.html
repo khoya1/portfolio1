@@ -33,7 +33,6 @@
       overflow-x: hidden;
     }
 
-    /* NOISE OVERLAY */
     body::before {
       content: '';
       position: fixed;
@@ -44,7 +43,6 @@
       z-index: 0;
     }
 
-    /* GLOW BLOBS */
     .glow-blob {
       position: fixed;
       border-radius: 50%;
@@ -58,7 +56,6 @@
 
     main { position: relative; z-index: 1; }
 
-    /* NAV */
     nav {
       position: fixed;
       top: 0; left: 0; right: 0;
@@ -92,7 +89,6 @@
     }
     .nav-links a:hover { color: var(--text); }
 
-    /* HERO */
     .hero {
       min-height: 100vh;
       display: flex;
@@ -178,7 +174,6 @@
     }
     .btn-ghost:hover { border-color: var(--text); transform: translateY(-1px); }
 
-    /* STATS ROW */
     .stats {
       display: flex;
       gap: 3rem;
@@ -201,7 +196,6 @@
       text-transform: uppercase;
     }
 
-    /* SECTIONS */
     section {
       max-width: 1100px;
       margin: 0 auto;
@@ -229,7 +223,6 @@
       letter-spacing: -0.02em;
     }
 
-    /* PROJECTS GRID */
     .projects-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
@@ -318,7 +311,6 @@
       letter-spacing: 0.05em;
     }
 
-    /* SKILLS */
     .skills-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -353,7 +345,6 @@
       color: var(--muted);
     }
 
-    /* CONTACT */
     .contact-row {
       display: flex;
       gap: 1rem;
@@ -402,7 +393,6 @@
       font-weight: 700;
     }
 
-    /* FOOTER */
     footer {
       border-top: 1px solid var(--border);
       padding: 2rem 3rem;
@@ -420,7 +410,6 @@
       color: var(--muted);
     }
 
-    /* CURSOR DOT */
     .cursor {
       width: 6px; height: 6px;
       background: var(--accent);
@@ -431,7 +420,6 @@
       transition: transform 0.1s;
     }
 
-    /* ANIMATIONS */
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(24px); }
       to   { opacity: 1; transform: translateY(0); }
@@ -472,8 +460,8 @@
 
   <main>
 
-    <!-- HERO -->
-    <div class="hero">
+    <div class="hero"style="flex-direction: row; align-items: center; gap: 4rem;">
+      <div style="flex: 1;">
       <p class="hero-eyebrow animate">Available for opportunities</p>
       <h1 class="animate delay-1">
         <span class="line-muted">Hello, I'm</span><br>
@@ -486,9 +474,13 @@
         <a href="#projects" class="btn btn-primary">View My Work</a>
         <a href="#contact" class="btn btn-ghost">Get In Touch</a>
       </div>
+        </div>
+  <div style="flex-shrink: 0;">
+    <img src="photo.jpg" alt="Khoyal Raumessur" style="width: 280px; height: 280px; border-radius: 50%; object-fit: cover; border: 3px solid var(--accent);">
+  </div>
+</div>
     </div>
 
-    <!-- PROJECTS -->
     <section id="projects">
       <div class="section-header">
         <h2 class="section-title">Featured Projects</h2>
@@ -576,16 +568,12 @@
       </div>
     </section>
 
-    <!-- SKILLS -->
     <section id="skills">
       <div class="section-header">
         <h2 class="section-title">Skills & Tools</h2>
       </div>
       <div class="skills-grid">
-      <!-- =============================================
-           SKILLS — Edit data-pct="NUMBER" (0–100) and the skill name text
-           Also update the matching % text in the .skill-pct div below each bar
-           ============================================= -->
+
       <div class="skill-card">
           <div class="skill-name">TypeScript</div>
         </div>
@@ -613,7 +601,6 @@
       </div>
     </section>
 
-    <!-- CONTACT -->
     <section id="contact">
       <div class="section-header">
         <h2 class="section-title">Get In Touch</h2>
@@ -655,7 +642,5 @@
   </main>
 
   <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-    // Animate skill bars on scroll
 
-    // Smooth number count-up for stats
   
